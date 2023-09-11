@@ -4,11 +4,11 @@
 
 ##### VNC是一款优秀的远程控制工具软件，由著名的 AT&T 的欧洲研究实验室开发的。VNC 是在基于 UNIX 和 Linux 操作系统的免费的开源软件，远程控制能力强大，高效实用。
 
-1. 登录集群vpn
+1. **登录集群vpn**
     详见--集群用户手册第3-4页vpn登录
     访问链接：https://hpc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
-2. 在你的电脑上使用终端ssh登录到集群
+2. **在你的电脑上使用终端ssh登录到集群**
     终端以MobaXterm为例
     下载链接：https://mobaxterm.mobatek.net/download-home-edition.html
 
@@ -17,7 +17,7 @@
 
 <img src="..\.image\vnc\1.png" alt="Image [1]" style="zoom: 80%;" />
 
-3. 资源申请
+3. **资源申请**
 
   申请资源以cpu资源为例
 
@@ -41,7 +41,7 @@
 
 <img src="..\.image\vnc\Image [1].png" alt="Image [1]" style="zoom: 80%;" />
 
-5. 在MobaXterm终端重新打开一个窗口并创建ssh隧道
+5. **在MobaXterm终端重新打开一个窗口并创建ssh隧道**
 
 <img src="..\.image\vnc\Image [2].png" alt="Image [2]" style="zoom:80%;" />
 
@@ -49,7 +49,7 @@
 
 <img src="..\.image\vnc\Image [3].png" alt="Image [3]" style="zoom:80%;" />
 
-6.vnc链接
+**6.vnc链接**
 
 > `打开Sessions—New session`
 
@@ -77,7 +77,7 @@
 <img src="..\.image\vnc\Image [9].png" alt="Image [9]" style="zoom:67%;" />
 
 
-7. ###### 关闭vnc远程桌面服务
+7. ###### **关闭vnc远程桌面服务**
 
   > `vncserver -kill :[screen]`
 
@@ -102,10 +102,11 @@
 
 
 
+------
 
 
 
-
-> ##### **有问题可直接发送邮箱：cdsc@cibr.ac.cn**
->
 > **计算与数据科学中心网站：cdsc.cibr.ac.cn**
+>
+> **有问题可直接发送邮箱：cdsc@cibr.ac.cn**
+
