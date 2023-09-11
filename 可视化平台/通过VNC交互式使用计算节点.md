@@ -15,7 +15,7 @@
 > ​        `ssh cluster_account@10.12.100.88`
 >
 
-![1](..\.image\vnc\1.png)
+<img src="..\.image\vnc\1.png" alt="Image [1]" style="zoom: 80%;" />
 
 3. 资源申请
 
@@ -24,7 +24,7 @@
 > ​       `srun -p q_cn -c 10 --pty bash -i`
 >
 
-![Image](..\.image\vnc\Image.png)
+<img src="..\.image\vnc\Image.png" alt="Image [1]" style="zoom: 80%;" />
 
 - 已经跳转到申请的计算节点c03b06n04上
   #-p  q_cn  集群队列，其他队列可使用命令sinfo查看，需要GPU的程序可申请q_ai8/q_ai4队列
@@ -83,7 +83,7 @@
 
 ​       例如：我本次启动vncserver的会话编号为2
 
-![Image [10]](..\.image\vnc\Image [10].png)
+<img src="..\.image\vnc\Image [10].png" alt="Image [1]" style="zoom: 80%;" />
 
 ##### 常见问题：
 
@@ -92,7 +92,7 @@
 
 > ​        `vnserver -geometry 1920x1080`
 
-![Image [11]](..\.image\vnc\Image [11].png)
+<img src="..\.image\vnc\Image [11].png" alt="Image [1]" style="zoom: 80%;" />
 
 2. vnc登录密码忘记
    vnc忘记之前设置的密码，可通过使用vncpasswd 命令修改密码，之后就可以使用新密码登录
