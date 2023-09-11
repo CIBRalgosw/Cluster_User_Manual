@@ -15,7 +15,7 @@
 > ​        `ssh cluster_account@10.12.100.88`
 >
 
-![1](Cluster_User_Manual/tree/main/.image/vnc/1.png)
+![1](..\.image\vnc\1.png)
 
 3. 资源申请
 
@@ -24,7 +24,7 @@
 > ​       `srun -p q_cn -c 10 --pty bash -i`
 >
 
-![Image](Cluster_User_Manual/tree/main/.image/vnc/Image.png)
+![Image](..\.image\vnc\Image.png)
 
 - 已经跳转到申请的计算节点c03b06n04上
   #-p  q_cn  集群队列，其他队列可使用命令sinfo查看，需要GPU的程序可申请q_ai8/q_ai4队列
@@ -39,7 +39,7 @@
   > `vncserver -ist`
   > `vncserver`
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [1].png" alt="Image [1]" style="zoom: 80%;" />
+<img src="..\.image\vnc\Image [1].png" alt="Image [1]" style="zoom: 80%;" />
 
 5. 在MobaXterm终端重新打开一个窗口并创建ssh隧道
 
@@ -47,7 +47,7 @@
 
 > `ssh -t -t cluster_account@10.12.100.88 -L 5902:localhost:5902 ssh c03b06n04 -L 5902:localhost:5902`
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [3].png" alt="Image [3]" style="zoom:80%;" />
+<img src="..\.image\vnc\Image [3].png" alt="Image [3]" style="zoom:80%;" />
 
 6.vnc链接
 
@@ -57,11 +57,11 @@
 
 > `点击VNC—IP address—Port—Start session in(可选)—OK`
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [5].png" alt="Image [5]" style="zoom:80%;" />
+<img src="..\.image\vnc\Image [5].png" alt="Image [5]" style="zoom:80%;" />
 
 > `登陆时需要您输入密码是启动vncserver的时候创建的密码`
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [6].png" alt="Image [6]" style="zoom: 67%;" />
+<img src="..\.image\vnc\Image [6].png" alt="Image [6]" style="zoom: 67%;" />
 
 > `右击鼠标-Open Terminal`
 
@@ -72,9 +72,9 @@
 > 环境加载： module load singularity_deeplabcut/2.2.3
 > 程序运行命令: singularity $IMG python3 -m deeplabcut
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [8].png" alt="Image [8]" style="zoom:67%;" />
+<img src="..\.image\vnc\Image [8].png" alt="Image [8]" style="zoom:67%;" />
 
-<img src="Cluster_User_Manual/tree/main/.image/vnc/Image [9].png" alt="Image [9]" style="zoom:67%;" />
+<img src="..\.image\vnc\Image [9].png" alt="Image [9]" style="zoom:67%;" />
 
 
 7. ###### 关闭vnc远程桌面服务
@@ -83,7 +83,7 @@
 
 ​       例如：我本次启动vncserver的会话编号为2
 
-![Image [10]](Cluster_User_Manual/tree/main/.image/vn/Image [10].png)
+![Image [10]](..\.image\vnc\Image [10].png)
 
 ##### 常见问题：
 
@@ -92,7 +92,7 @@
 
 > ​        `vnserver -geometry 1920x1080`
 
-![Image [11]](Cluster_User_Manual/tree/main/.image/vn/Image [11].png)
+![Image [11]](..\.image\vnc\Image [11].png)
 
 2. vnc登录密码忘记
    vnc忘记之前设置的密码，可通过使用vncpasswd 命令修改密码，之后就可以使用新密码登录
