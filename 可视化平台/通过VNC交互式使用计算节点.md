@@ -5,10 +5,12 @@
 ##### VNC是一款优秀的远程控制工具软件，由著名的 AT&T 的欧洲研究实验室开发的。VNC 是在基于 UNIX 和 Linux 操作系统的免费的开源软件，远程控制能力强大，高效实用。
 
 1. **登录集群vpn**
+
     详见--集群用户手册第3-4页vpn登录
     访问链接：https://hpc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
 2. **在你的电脑上使用终端ssh登录到集群**
+
     终端以MobaXterm为例
     下载链接：https://mobaxterm.mobatek.net/download-home-edition.html
 
@@ -34,7 +36,7 @@
 - 集群硬件资源配置可查看集群用户手册第2页
   下载链接：https://hpc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
-4. 启动vncserver服务
+4. **启动vncserver服务**
 
   > `vncserver -ist`
   > `vncserver`
@@ -45,15 +47,17 @@
 
 <img src="..\.image\vnc\Image [2].png" alt="Image [2]" style="zoom:80%;" />
 
-> `ssh -t -t cluster_account@10.12.100.88 -L 5902:localhost:5902 ssh c03b06n04 -L 5902:localhost:5902`
+>  ssh -L 5902:c03b06n04:5902 wangyanmin@10.12.100.88
 
-<img src="..\.image\vnc\Image [3].png" alt="Image [3]" style="zoom:80%;" />
+<img src="..\.image\vnc\Image [3].png" alt="Image [1]" style="zoom: 80%;" />
 
 **6.vnc链接**
 
 > `打开Sessions—New session`
 
-<img src="..\.image\vnc\Image [4].png" alt="Image [4]" style="zoom:80%;" />
+![Image [4] ](..\.image\vnc\Image [4] .png)
+
+
 
 > `点击VNC—IP address—Port—Start session in(可选)—OK`
 
@@ -77,7 +81,7 @@
 <img src="..\.image\vnc\Image [9].png" alt="Image [9]" style="zoom:67%;" />
 
 
-7. ###### **关闭vnc远程桌面服务**
+7. **关闭vnc远程桌面服务**
 
   > `vncserver -kill :[screen]`
 
