@@ -38,7 +38,7 @@
 
 4. **启动vncserver服务**
 
-  > `vncserver -ist`
+  > `vncserver -list`
   > `vncserver`
 
 <img src="..\.image\vnc\Image [1].png" alt="Image [1]" style="zoom: 80%;" />
