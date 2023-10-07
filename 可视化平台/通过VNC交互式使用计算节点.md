@@ -57,7 +57,7 @@
 
 
 
-<img src="..\.image\vnc\Image [4] .png" alt="Image [1]" style="zoom: 80%;" />
+<img src="..\.image\vnc\Image [4].png" alt="Image [1]" style="zoom: 80%;" />
 
 > `点击VNC—IP address—Port—Start session in(可选)—OK`
 
