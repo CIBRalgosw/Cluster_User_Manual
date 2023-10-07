@@ -7,7 +7,7 @@
 1. **登录集群vpn**
 
     详见--集群用户手册第3-4页vpn登录
-    访问链接：https://hpc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
+    访问链接：https://.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
 2. **在你的电脑上使用终端ssh登录到集群**
 
@@ -55,9 +55,9 @@
 
 > `打开Sessions—New session`
 
-![Image [4] ](..\.image\vnc\Image [4] .png)
 
 
+<img src="..\.image\vnc\Image [4] .png" alt="Image [1]" style="zoom: 80%;" />
 
 > `点击VNC—IP address—Port—Start session in(可选)—OK`
 
