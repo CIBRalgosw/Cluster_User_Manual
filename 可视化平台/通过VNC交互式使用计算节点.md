@@ -14,8 +14,9 @@
     终端以MobaXterm为例
     下载链接：https://mobaxterm.mobatek.net/download-home-edition.html
 
-> ​        `ssh cluster_account@10.12.100.88`
->
+```
+ssh cluster_account@10.12.100.88
+```
 
 <img src="..\.image\vnc\1.png" alt="Image [1]" style="zoom: 80%;" />
 
@@ -23,8 +24,11 @@
 
   申请资源以cpu资源为例
 
-> ​       `srun -p q_cn -c 10 --pty bash -i`
->
+```
+srun -p q_cn -c 10 --pty bash -i
+```
+
+
 
 <img src="..\.image\vnc\Image.png" alt="Image [1]" style="zoom: 80%;" />
 
@@ -38,9 +42,11 @@
 
 4. **启动vncserver服务**
 
-  > `vncserver -list`
-  >
-  > `vncserver`
+```
+vncserver -list
+
+vncserver
+```
 
 <img src="..\.image\vnc\Image [1].png" alt="Image [1]" style="zoom: 80%;" />
 
@@ -48,34 +54,48 @@
 
 <img src="..\.image\vnc\Image [2].png" alt="Image [2]" style="zoom:80%;" />
 
->  ssh -L 5902:c03b06n04:5902 wangyanmin@10.12.100.88
+```
+ssh -L 5902:c03b06n04:5902 wangyanmin@10.12.100.88
+```
 
 <img src="..\.image\vnc\Image [3].png" alt="Image [1]" style="zoom: 80%;" />
 
 **6.vnc链接**
 
-> `打开Sessions—New session`
+```
+打开Sessions—New session
+```
 
 
 
 <img src="..\.image\vnc\Image [4].png" alt="Image [1]" style="zoom: 80%;" />
 
-> `点击VNC—IP address—Port—Start session in(可选)—OK`
+```
+点击VNC—IP address—Port—Start session in(可选)—OK
+```
 
 <img src="..\.image\vnc\Image [5].png" alt="Image [5]" style="zoom:80%;" />
 
-> `登陆时需要您输入密码是启动vncserver的时候创建的密码`
+```
+登陆时需要您输入密码是启动vncserver的时候创建的密
+```
+
+`码`
 
 <img src="..\.image\vnc\Image [6].png" alt="Image [6]" style="zoom: 67%;" />
 
-> `右击鼠标-Open Terminal`
+```
+右击鼠标-Open Terminal
+```
 
 <img src="..\.image\vnc\Image [7].png" alt="Image [7]" style="zoom:67%;" />
 
 以deeplabcut程序为例
 
-> 环境加载： module load singularity_deeplabcut/2.2.3
-> 程序运行命令: singularity $IMG python3 -m deeplabcut
+```
+环境加载： module load singularity_deeplabcut/2.2.3
+程序运行命令: singularity $IMG python3 -m deeplabcut
+```
 
 <img src="..\.image\vnc\Image [8].png" alt="Image [8]" style="zoom:67%;" />
 
@@ -84,7 +104,9 @@
 
 7. **关闭vnc远程桌面服务**
 
-  > `vncserver -kill :[screen]`
+```
+vncserver -kill :[screen]
+```
 
 ​       例如：我本次启动vncserver的会话编号为2
 
@@ -95,7 +117,9 @@
 1. 我的图形界面显示不全
    这样在启动vncserver服务的时候需要指定屏幕分辨率，比如我的电脑分辨率是1920x1080就可以设置为
 
-> ​        `vnserver -geometry 1920x1080`
+```
+        vncserver -geometry 1920x1080
+```
 
 <img src="..\.image\vnc\Image [11].png" alt="Image [1]" style="zoom: 80%;" />
 
