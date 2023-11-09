@@ -1,14 +1,14 @@
-### AFsample - AlphaFold with aggressive sampling
+# AFsample - AlphaFold with aggressive sampling
 
 
 
-This package provides an implementation of the `Wallner` method that was the best method in multimer prediction in CASP15.
+**This package provides an implementation of the `Wallner` method that was the best method in multimer prediction in CASP15.**
 
-It is based on the AlphaFold system developed by DeepMind https://github.com/deepmind/alphafold/
+**It is based on the AlphaFold system developed by DeepMind https://github.com/deepmind/alphafold/**
 
 
 
-###### **版本**
+### **版本**
 
 | version | build | squeue  | Organizations | Branch | commint                                  |
 | ------- | ----- | ------- | ------------- | ------ | ---------------------------------------- |
@@ -16,22 +16,22 @@ It is based on the AlphaFold system developed by DeepMind https://github.com/dee
 
 
 
-###### 软件安装路径：
+### 软件安装路径：
 
 ```
 /usr/nzx-cluster/apps/afsample
 ```
 
-###### 数据库路径：
+### 数据库路径：
 
 ```
 /GPFS/PUB/afsample/alphafold_data
 ```
 
-###### 使用前准备
+### 使用前准备
 
 - 新建文件夹，如afsample 
-- 在文件夹里放置一个fasta文件，例如test.fasta文件
+- 在文件夹里放置一个fasta文件，例如ENSFCAP00000052000_Fcat.fasta文件
 
 
 
@@ -55,9 +55,7 @@ Say we have a homomer with 3 copies of the same sequence `<SEQUENCE>`. The input
 
 
 
-
-
-###### AFsample  monomer运行示例：
+### AFsample  monomer运行示例：
 
 ```
 #!/bin/bash 
@@ -72,7 +70,7 @@ Say we have a homomer with 3 copies of the same sequence `<SEQUENCE>`. The input
 module load afsample/2.2.0
 
 python /usr/nzx-cluster/apps/afsample/alphafoldv2.2.0/run_alphafold.py \
---fasta_paths=/home/yuezhifeng_lab/wangyanmin/scratch60/test_data/afsample/ENSFCAP00000052000_Fcat.fasta
+--fasta_paths=/home/yuezhifeng_lab/wangyanmin/scratch60/test_data/afsample/ENSFCAP00000052000_Fcat.fasta \
 --uniref90_database_path=$DOWNLOAD_DIR/uniref90/uniref90.fasta  \
 --mgnify_database_path=$DOWNLOAD_DIR/mgnify/mgy_clusters.fa \
 --template_mmcif_dir=/GPFS/PUB/afsample/alphafold_data/pdb_mmcif/mmcif_files \
@@ -87,9 +85,7 @@ python /usr/nzx-cluster/apps/afsample/alphafoldv2.2.0/run_alphafold.py \
 
 
 
-
-
-###### AFsample  multimer运行示例：
+### AFsample  multimer运行示例：
 
 ```
 #!/bin/bash 
@@ -120,7 +116,7 @@ python /usr/nzx-cluster/apps/afsample/alphafoldv2.2.0/run_alphafold.py \
 
 
 
-#### 参考：
+### 参考：
 
 github 网址：https://github.com/bjornwallner/alphafoldv2.2.0
 
