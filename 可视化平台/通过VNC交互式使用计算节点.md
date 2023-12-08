@@ -7,7 +7,7 @@
 1. **登录集群vpn**
 
     详见--集群用户手册第3-4页vpn登录
-    访问链接：https://.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
+    访问链接：https://cdsc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
 2. **在你的电脑上使用终端ssh登录到集群**
 
@@ -77,10 +77,8 @@ ssh -L 5902:c03b06n04:5902 wangyanmin@10.12.100.88
 <img src="..\.image\vnc\Image [5].png" alt="Image [5]" style="zoom:80%;" />
 
 ```
-登陆时需要您输入密码是启动vncserver的时候创建的密
+登陆时需要您输入密码是启动vncserver的时候创建的密码
 ```
-
-`码`
 
 <img src="..\.image\vnc\Image [6].png" alt="Image [6]" style="zoom: 67%;" />
 
