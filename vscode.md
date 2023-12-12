@@ -33,7 +33,7 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 打开VSCode软件， 安装 Remote SSH插件
 
-![image-20231120201143795](.image\vscode\image-20231120201143795.png)
+<img src=".image\vscode\image-20231120201143795.png" alt="image-20231120201143795" />
 
 **2. SSH密钥配置**
 
@@ -48,7 +48,7 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 输入上述命令之后，遇到等待时，直接按ENTER键保持默认，需要敲击3次ENTER键，然后就会在 `C:\Users\it_12\.ssh 目录中产生SSH密钥文件：`id_rsa` 和 `id_rsa.pub
 
-![image-20231120201618434](.image\vscode\image-20231120201618434.png)
+<img src=".image\vscode\image-20231120201618434.png" alt="image-20231120201618434" />
 
 
 
@@ -76,11 +76,11 @@ mkdir ~/.ssh
 
 打开VSCode，然后点击左侧的 “远程资源管理器” 图标，接着点击右上角的小齿轮（设置）：
 
-![image-20231120202535978](.image\vscode\image-20231120202535978.png)
+<img src=".image\vscode\image-20231120202535978.png" alt="image-20231120202535978" />
 
 在弹出来的窗口中，选择第一项，打开 config 文件，然后填写配置信息：
 
-![image-20231120202637154](.image\vscode\image-20231120202637154.png)
+<img src=".image\vscode\image-20231120202637154.png" alt="image-20231120202637154" />
 
 ```
 Read more about SSH config files: https://linux.die.net/man/5/ssh_config
@@ -100,11 +100,11 @@ Host <远程主机IP>
 
 在完成上述配置之后，进入 “远程资源管理器” 选项，右键点击主机名，然后选择“Connect to Host in Current Window”或者“Connect to Host in New Window”：
 
-![image-20231120203919843](.image\vscode\image-20231120203919843.png)
+<img src=".image\vscode\image-20231120203919843.png" alt="image-20231120203919843" />
 
-![image-20231121085447934](.image\vscode\image-20231121085447934.png)
+<img src=".image\vscode\image-20231121085447934.png" alt="image-20231121085447934" />
 
 点击“打开文件夹”可以打开集群中的文件夹，我这里打开集群里的DATA文件夹，此时我们就可以在Windows系统中，利用VSCode的Remote-SSH插件阅读集群的数据了，是不是很酷：
 
-![image-20231121085717694](.image\vscode\image-20231121085717694.png)
+<img src=".image\vscode\image-20231121085717694.png" alt="image-20231121085717694" />
 
