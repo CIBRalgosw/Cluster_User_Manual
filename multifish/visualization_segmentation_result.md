@@ -34,7 +34,7 @@ pip install "napari[all]"
 
 可以参考下面这个python代码来运行自己的数据:
 
-[visualization_segmentation_result.py](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/visualization_segmentation_result.py)
+[visualization_segmentation_result.py](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/main/multifish/visualization_segmentation_result.py)
 
 主要参数如下：
 ```python
