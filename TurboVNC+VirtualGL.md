@@ -1,4 +1,4 @@
-## 通过TurboVNC+Virtual交互式使用计算节点
+## 通过TurboVNC+VirtuGL交互式使用计算节点
 
 
 
