@@ -37,13 +37,13 @@
 
 
 
-**1.首先ssh登录到集群的登录节点**
+**1. 首先ssh登录到集群的登录节点**
 
 ```
 ssh wangyanmin@10.12.100.88
 ```
 
-**2.创建脚本jupyter-notebook.sh**
+**2. 创建脚本jupyter-notebook.sh**
 
 ```
 #!/bin/bash 
@@ -61,13 +61,13 @@ jupyter-notebook --ip=0.0.0.0 --port=14780   #以14780端口为例，可申请�
 
 
 
-**3.提交作业**
+**3. 提交作业**
 
 ```
 sbatch   jupyter-notebook.sh
 ```
 
-**4.查看作业分配状态，已分配到c03b06n04节点上**
+**4. 查看作业分配状态，已分配到c03b06n04节点上**
 
 ```
 [wangyanmin@login02 jupyter]$ job
@@ -75,7 +75,7 @@ sbatch   jupyter-notebook.sh
    6800568      q_cn  jupyter      wangyanmin  R       1:00      1     10  4900M  c03b06n04
 ```
 
-**5.查看日志输出**
+**5. 查看日志输出**
 
 ```
 To access the notebook, open this file in a browser: 
@@ -89,13 +89,13 @@ Or copy and paste one of these URLs:
 
 **http://127.0.0.1:14780/?token=024538b3cd59f7006e0365c81da450eb0498188e399485ed**
 
-**6.在MobaXterm上打开一个新的窗口并创建ssh隧道:（第一个14780为本地端口,不能冲突，一个jupyter只能使用一个不同的端口，可随意设置） 第二个14780端口要和日志输出的端口为准，参考5日志输出信息）**
+**6. 在MobaXterm上打开一个新的窗口并创建ssh隧道:（第一个14780为本地端口,不能冲突，一个jupyter只能使用一个不同的端口，可随意设置） 第二个14780端口要和日志输出的端口为准，参考5日志输出信息）**
 
 ```
 ssh -L 14780:c03b06n04:14780 wangyanmin@10.12.100.88
 ```
 
-**7.在笔记本电脑上打开浏览器窗口，您就可以直接浏览**
+**7. 在笔记本电脑上打开浏览器窗口，您就可以直接浏览**
 
 **http://127.0.0.1:14780/?token=024538b3cd59f7006e0365c81da450eb0498188e399485ed**
 

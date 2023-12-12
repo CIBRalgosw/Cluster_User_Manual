@@ -27,7 +27,7 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 
 
-**1.本地安装 VS Code 及插件**
+**1. 本地安装 VS Code 及插件**
 
 下载本地操作系统对应的 VSCode安装包并根据步骤安装 [VS code download](https://code.visualstudio.com/download) 
 
@@ -35,7 +35,7 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 ![image-20231120201143795](.image\vscode\image-20231120201143795.png)
 
-**2.SSH密钥配置**
+**2. SSH密钥配置**
 
 在Windows上生成SSH密钥，然后部署到集群中，这样每次重启VSCode之后，使用Remote-SSH访问集群中的文件时，不需要手动输入密码了
 
@@ -52,7 +52,7 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 
 
-**3.部署密钥文件到集群**
+**3. 部署密钥文件到集群**
 
 首先，确保当前用户的用户目录下是否存在 `.ssh` 目录（我这里的完整路径为：`/home/yuezhifeng_lab/wangyanmin/.ssh` ）
 
@@ -70,7 +70,7 @@ mkdir ~/.ssh
 
 
 
-**4.Remote-SSH配置**
+**4. Remote-SSH配置**
 
 配置Remote-SSH，完成Remote-SSH的配置之后，就可以通过Remote-SSH访问集群的文件或者文件夹，就像在本地电脑开发一样。
 
@@ -89,11 +89,13 @@ Host l0.12.100.6
   User wangyanmin
 ```
 
+```
 上述配置信息的注释如下：
-
 Host <远程主机IP>    
     HostName <远程主机IP>
     User <用户名>
+```
+
  集群登录节点为login01（10.12.100.5）和login02 （10.12.100.6）
 
 在完成上述配置之后，进入 “远程资源管理器” 选项，右键点击主机名，然后选择“Connect to Host in Current Window”或者“Connect to Host in New Window”：

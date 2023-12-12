@@ -1,4 +1,4 @@
-## 通过TurboVNC交互式使用计算节点
+## 通过TurboVNC+Virtual交互式使用计算节点
 
 
 
@@ -8,12 +8,12 @@
 
 
 
-1. **登录集群vpn**
+1. ##### **登录集群vpn**
 
 详见--集群用户手册第3-4页vpn登录
 访问链接：https://cdsc.cibr.ac.cn/Public/Upload/File/20221114/北京脑中心高性能集群使用手册_v5.0%20-%20用户版.pdf
 
-2. **在你的电脑上使用终端ssh登录到集群**
+2. ##### **在你的电脑上使用终端ssh登录到集群**
 
 终端以MobaXterm为例
 
@@ -23,9 +23,11 @@
 ssh cluster_account@10.12.100.88
 ```
 
-![image-20231129205129313](.image\turbovnc\image-20231129205129313.png)
+<img src=".image\turbovnc\image-20231129205129313.png" alt="image-20231129205129313" />
 
-3. **资源申请**
+
+
+3. ##### 资源申请
 
   申请资源以gpu资源为例
 
@@ -33,7 +35,7 @@ ssh cluster_account@10.12.100.88
  srun -p q_ai8 -c 4 --gres=gpu:1 --pty bash -i
 ```
 
-![image-20231129205247673](.image\turbovnc\image-20231129205247673.png)
+<img src=".image\turbovnc\image-20231129205247673.png" alt="image-20231129205247673" />
 
 - 已经跳转到申请的gpu节点的ai01上
   #-p  q_ai8  集群队列，其他队列可使用命令sinfo查看
@@ -45,7 +47,7 @@ ssh cluster_account@10.12.100.88
 
 
 
-4.  **启动vncserver服务**
+4.  ##### **启动vncserver服务**
 
 ```
 module load turbovnc/3.0.3
@@ -53,37 +55,37 @@ vncserver -list
 vncserver
 ```
 
-![image-20231129210721399](.image\turbovnc\image-20231129210721399.png)
+<img src=".image\turbovnc\image-20231129210721399.png" alt="image-20231129210721399" />
 
-5. **在MobaXterm终端重新打开一个窗口并创建ssh隧道**
+5. ##### **在MobaXterm终端重新打开一个窗口并创建ssh隧道**
 
-![image-20231129211020283](.image\turbovnc\image-20231129211020283.png)
+<img src=".image\turbovnc\image-20231129211020283.png" alt="image-20231129211020283" />
 
 ```
 ssh -L 5902:ai01:5902 wangyanmin@10.12.100.88
 ```
 
-![image-20231129212650324](.image\turbovnc\image-20231129212650324.png)
+<img src=".image\turbovnc\image-20231129212650324.png" alt="image-20231129212650324" />
 
-6. vnc链接
+6. ##### vnc链接
 
 ```
 打开Sessions—New session
 ```
 
-![image-20231130123404361](.image\turbovnc\image-20231130123404361.png)
+<img src=".image\turbovnc\image-20231130123404361.png" alt="image-20231130123404361" />
 
 ```
 点击VNC—IP address—Port—Start session in(可选)—OK
 ```
 
-![image-20231129214048429](.image\turbovnc\image-20231129214048429.png)
+<img src=".image\turbovnc\image-20231129214048429.png" alt="image-20231129214048429" />
 
 ```
 登陆时需要您输入密码是启动vncserver的时候创建的密码
 ```
 
-![image-20231129214220947](.image\turbovnc\image-20231129214223491.png)
+<img src=".image\turbovnc\image-20231129214223491.png" alt="image-20231129214220947" />
 
 
 
@@ -91,26 +93,38 @@ ssh -L 5902:ai01:5902 wangyanmin@10.12.100.88
 点击Activities-Terminal
 ```
 
-![image-20231129214405781](.image\turbovnc\image-20231129214405781.png)
+<img src=".image\turbovnc\image-20231129214405781.png" alt="image-20231129214405781" />
 
-加载 turbovnc/3.0.3 virtualgl/3.1 环境
+7. ##### 加载 turbovnc/3.0.3  virtualgl/3.1 环境
 
 ```
 module load turbovnc/3.0.3 virtualgl/3.1
 ```
 
-![image-20231129214739659](.image\turbovnc\image-20231129214739659.png)
+<img src=".image\turbovnc\image-20231129214739659.png" alt="image-20231129214739659" />
 
+8. ##### 查看申请的GPU的编号
 
+##### 
 
-7. 运行命令
-
-```
-确认下申请的GPU编号：
+查看申请的GPU编号：
 nvidia-smi -q | grep "Minor Number"
 
-例如：vglrun -d /dev/dri/card0 glxgears
+```
+[wangyanmin@ai01 ~]$ nvidia-smi -q | grep "Minor Number"
+    Minor Number                          : 5
 ```
 
--  -d /dev/dri/card0  为申请的卡的编号  GPU 0需要设置/dev/dri/card0 以次类推
 
+
+9. ##### 运行
+
+```
+vglrun -d /dev/dri/card5 glxgears
+```
+
+-  vglrun 启用VirtualGL 
+-  -d  /dev/dri/card5   5为申请的GPU卡的编号 
+-  glxgears 运行的程序
+
+##### 
