@@ -12,11 +12,11 @@
 
 可以参考下面这个jupyter notebook来运行自己的数据
 
-[bigstream2_align_from_Greg.ipynb](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/bigstream/bigstream2_align_from_Greg.ipynb)
+[bigstream2_align_from_Greg.ipynb](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/bigstream/bigstream2_align_from_Greg.ipynb)
 
 下载下来之后，还需要加载环境、修改参数，然后才能运行。
 
-对应的也有py文件，也可以直接使用python运行：[bigstream2_align_from_Greg.py](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/bigstream/bigstream2_align_from_Greg.py)
+对应的也有py文件，也可以直接使用python运行：[bigstream2_align_from_Greg.py](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/bigstream/bigstream2_align_from_Greg.py)
 
 ### 环境加载
 

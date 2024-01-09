@@ -6,7 +6,7 @@
 
 #### 下载模板sh文件
 
-[run_registration_local.sh](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/bigstream/run_registration_local.sh)
+[run_registration_local.sh](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/bigstream/run_registration_local.sh)
 
 #### 修改参数，主要是数据路径、算法参数等
 
@@ -32,4 +32,4 @@ ssh fat01
 
 ### 其他说明
 
-* 该说明有很多地方待进一步完善，有不明白的地方随时联系。
+* 该文档有很多地方待进一步完善，有不明白的地方随时联系。
