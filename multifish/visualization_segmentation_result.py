@@ -24,6 +24,8 @@ segmentation_dir = f"{output_dir}/{sample}/segmentation"
 segmentation_dir_files = list(Path(segmentation_dir).glob("*.tif"))
 assert len(segmentation_dir_files) == 1, "the number of segmentation results is not one"
 segmentation_tif = segmentation_dir_files[0]
+print('segmentation result file:')
+print(segmentation_tif)
 lb = imread(str(segmentation_tif))
 print("label:")
 print(lb.dtype, lb.shape, lb.min(), lb.max())
@@ -32,6 +34,9 @@ print(lb.dtype, lb.shape, lb.min(), lb.max())
 stitching_dir = f"{output_dir}/{sample}/stitching/export.n5"
 store = zarr.N5Store(stitching_dir)
 im = zarr.open(store=store, mode="r")
+print('stitching result file:')
+print(stitching_dir)
+print(f"{dapi}/{segmentation_scale}")
 img = im[f"{dapi}/{segmentation_scale}"][...]
 print("image:")
 print(img.dtype, img.shape, img.min(), img.max())
