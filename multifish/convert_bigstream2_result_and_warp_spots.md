@@ -150,6 +150,7 @@ main_apply_transform_coords.py \
 --output-coords /GPFS/gongrong_lab_temp/zqj00at00grlab/s2r7/outputs/s2_r7/spots/spots_c1_warped.txt \
 --input-volume /GPFS/gongrong_lab_temp/zqj00at00grlab/s2r7/outputs/s2_r7/stitching/export.n5 \
 --input-dataset /c0/s3 \
+--affine-transformations /GPFS/gongrong_lab_temp/zqj00at00grlab/s2r7/outputs/s2_r7/registration/s2_r7-to-s2_r2/inv-affine-transform.mat \
 --vector-field-transform /GPFS/gongrong_lab_temp/zqj00at00grlab/s2r7/outputs/s2_r7/registration/s2_r7-to-s2_r2/invtransform \
 --vector-field-transform-subpath s3
 ```
@@ -158,6 +159,7 @@ main_apply_transform_coords.py \
 * --output-coords：输出路径
 * --input-volume：对应图像的路径，即mov image路径
 * --input-dataset：对应图像subpath
+* --affine-transformations 选择上述生成的变形场里面的inv-affine-transform.mat文件
 * --vector-field-transform：选择上述生成的变形场里面的invtransform文件夹的路径
 * --vector-field-transform-subpath：设置为s3
 
