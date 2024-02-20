@@ -1,7 +1,8 @@
 
 该说明包含两个部分：
 * 转换变形场格式（把外部跑bigstream2的结果转换成pipeline里面可以使用的格式）
-* 应用warp_spots
+* 应用warp_spots (<span style="color:red">**Deprecated!**</span>
+参见这里最新教程 [warp_spots_doc](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/warp_spots_doc.md))
 
 把外部跑bigstream2的结果转换成pipeline里面可以使用的格式。需要的文件，两个变形场，eg：
 
@@ -141,6 +142,9 @@ srun -c 36 --mem 150G -J apply_transform
 warped结果仅仅是为了可视化查看需要，没有该结果也不影响后续spot_warped的执行。
 
 #### 应用warp_spots
+
+(<span style="color:red">**Deprecated!**</span>
+参见这里最新教程 [warp_spots_doc](https://github.com/CIBRalgosw/Cluster_User_Manual/blob/cv/multifish/warp_spots_doc.md))
 
 转换变形场之后可以使用转换后的变形场进行warp_spots操作，示例命令如下：
 ```commandline
