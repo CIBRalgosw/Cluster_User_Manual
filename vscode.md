@@ -98,15 +98,13 @@ Host login02
 
 在完成上述配置之后，进入 “远程资源管理器” 选项，右键点击主机名，然后选择“Connect to Host in Current Window”或者“Connect to Host in New Window”：
 
-![image-20240521131921826](.image\vscode\image-20240521131921826.png)
+<img src=".image\vscode\image-20240521131921826.png" alt="image-20240521131921826" />
 
-![image-20240521132042945](.image\vscode\image-20240521132042945.png)
+<img src=".image\vscode\image-20240521132042945.png" alt="image-20240521132042945" />
 
 点击“打开文件夹”可以打开集群中的文件夹，我这里打开集群里的DATA文件夹，此时我们就可以在Windows系统中，利用VSCode的Remote-SSH插件阅读集群的数据了，是不是很酷：
 
-![image-20240521132055643](.image\vscode\image-20240521132055643.png)
-
-
+<img src=".image\vscode\image-20240521132055643.png" alt="image-20240521132055643" />
 
 > ### 连接集群计算节点
 
@@ -119,30 +117,27 @@ Host login02
    7686552      q_cn     bash      wangyanmin  R       0:13      1     10  4900M  c02b03n02
 ```
 
-![image-20240521132413454](.image\vscode\vscode.md)
-
-![image-20240521132433375](.image\vscode\image-20240521132433375.png)
+<img src=".image\vscode\vscode.md" alt="vscode" />
 
 更新配置文件C:\Users\it_12\.ssh\config
 
-![image-20240521135143334](.image\vscode\image-20240521135143334.png)
+<img src=".image\vscode\image-20240521135143334.png" alt="image-20240521135143334" />
 
 刷新配置
 
+<img src=".image\vscode\image-20240521135202995.png" alt="image-20240521135202995.png" />
 
 
-![image-20240521135202995](.image\vscode\image-20240521135202995.png)
 
 先连接登录节点
 
-![image-20240521135247124](.image\vscode\image-20240521135247124.png)
+<img src=".image\vscode\image-20240521135247124.png" alt="image-20240521135247124" />
 
-![image-20240521135313961](.image\vscode\image-20240521135313961.png)
+在连接计算节点
 
-连接计算节点
+<img src=".image\vscode\image-20240521135333301.png" alt="image-20240521135333301" />
 
-![image-20240521135333301](.image\vscode\image-20240521135333301.png)
+<img src=".image\vscode\image-20240521141952781.png" alt="image-20240521141952781" />
 
 
 
-![image-20240521135422126](.image\vscode\image-20240521135422126.png)
