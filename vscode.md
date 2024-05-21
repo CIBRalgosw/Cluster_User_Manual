@@ -27,6 +27,10 @@ VSCode经过配置，可以远程连接到集群，在本地进行远程的开�
 
 
 
+> ### 连接集群登录节点
+
+
+
 **1. 本地安装 VS Code 及插件**
 
 下载本地操作系统对应的 VSCode安装包并根据步骤安装 [VS code download](https://code.visualstudio.com/download) 
@@ -65,7 +69,7 @@ mkdir ~/.ssh
 通过SFTP等方式将windows电脑生成的 `id_rsa.pub` 文件传输到集群的 `/home/yuezhifeng_lab/wangyanmin/.ssh` 目录中
 
 ```
-[wangyanmin@login02 .ssh]$ cat id_rsa.pub > authorized_keys
+[wangyanmin@login02 .ssh]$ cat id_rsa.pub >> authorized_keys
 ```
 
 
@@ -83,28 +87,62 @@ mkdir ~/.ssh
 <img src=".image\vscode\image-20231120202637154.png" alt="image-20231120202637154" />
 
 ```
-Read more about SSH config files: https://linux.die.net/man/5/ssh_config
-Host l0.12.100.6
- HostName 10.12.100.6
-  User wangyanmin
-```
-
-```
-上述配置信息的注释如下：
-Host <远程主机IP>    
-    HostName <远程主机IP>
-    User <用户名>
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host login02
+    HostName 10.12.100.6
+    User wangyanmin
+    IdentityFile C:\Users\it_12\.ssh\id_rsa
 ```
 
  集群登录节点为login01（10.12.100.5）和login02 （10.12.100.6）
 
 在完成上述配置之后，进入 “远程资源管理器” 选项，右键点击主机名，然后选择“Connect to Host in Current Window”或者“Connect to Host in New Window”：
 
-<img src=".image\vscode\image-20231120203919843.png" alt="image-20231120203919843" />
+![image-20240521131921826](.image\vscode\image-20240521131921826.png)
 
-<img src=".image\vscode\image-20231121085447934.png" alt="image-20231121085447934" />
+![image-20240521132042945](.image\vscode\image-20240521132042945.png)
 
 点击“打开文件夹”可以打开集群中的文件夹，我这里打开集群里的DATA文件夹，此时我们就可以在Windows系统中，利用VSCode的Remote-SSH插件阅读集群的数据了，是不是很酷：
 
-<img src=".image\vscode\image-20231121085717694.png" alt="image-20231121085717694" />
+![image-20240521132055643](.image\vscode\image-20240521132055643.png)
 
+
+
+> ### 连接集群计算节点
+
+登录集群申请资源，申请的计算节点为（c02b03n02）
+
+```
+[wangyanmin@login01 ~]$ salloc -p q_cn -c 10  
+[wangyanmin@login01 ~]$ job
+     JOBID PARTITION     NAME            USER ST       TIME  NODES   CPUS  MIN_M   NODELIST
+   7686552      q_cn     bash      wangyanmin  R       0:13      1     10  4900M  c02b03n02
+```
+
+![image-20240521132413454](.image\vscode\vscode.md)
+
+![image-20240521132433375](.image\vscode\image-20240521132433375.png)
+
+更新配置文件C:\Users\it_12\.ssh\config
+
+![image-20240521135143334](.image\vscode\image-20240521135143334.png)
+
+刷新配置
+
+
+
+![image-20240521135202995](.image\vscode\image-20240521135202995.png)
+
+先连接登录节点
+
+![image-20240521135247124](.image\vscode\image-20240521135247124.png)
+
+![image-20240521135313961](.image\vscode\image-20240521135313961.png)
+
+连接计算节点
+
+![image-20240521135333301](.image\vscode\image-20240521135333301.png)
+
+
+
+![image-20240521135422126](.image\vscode\image-20240521135422126.png)
