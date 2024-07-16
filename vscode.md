@@ -123,7 +123,7 @@ Host login02
 
 <img src=".image\vscode\image-20240521135143334.png" alt="image-20240521135143334" />
 
-刷新配置
+刷新配置 （**注意：第12行ProxyJump配置名称跟第2行Host名称一致，且第2行到第5行必须为login节点的配置。**）
 
 <img src=".image\vscode\image-20240521135202995.png" alt="image-20240521135202995.png" />
 
